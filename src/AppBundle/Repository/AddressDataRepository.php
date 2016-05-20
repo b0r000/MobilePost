@@ -10,4 +10,9 @@ namespace AppBundle\Repository;
  */
 class AddressDataRepository extends \Doctrine\ORM\EntityRepository
 {
+	public function save(AddressDataInterface $addressdata) {
+		$em = $this->getEntityManager();
+		$em->persist($addressdata);
+		$em->flush();
+	}
 }

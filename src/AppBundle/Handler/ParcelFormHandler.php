@@ -24,6 +24,8 @@
 		
 		public function post(array $parameters)
 		{
+			var_dump("new parcel done\n");
+			var_dump($parameters);
 			$parcel = $this->createParcel();
 			return $this->processForm($parcel, $parameters, 'POST');
 		}
